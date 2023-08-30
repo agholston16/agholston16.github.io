@@ -11,6 +11,10 @@ const skills = ["SEM", "EDS", "XPS", "Nanofabrication", "Astro", "Writing"];
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase =  "caps"
 ---
 
 <html lang="en">
@@ -38,8 +42,9 @@ const goal = 3;
 				  	font-size: 4rem;
 					}
 					.skill {
-    					color: green;
-    					font-weight: bold;
+    					color: var(--skillColor);
+    					font-weight: var(--fontWeight);
+						text-transform: var(--textCase);
   						}
 			  	</style>
 			<h1>{pageTitle}</h1>
