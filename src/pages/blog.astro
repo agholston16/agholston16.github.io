@@ -1,5 +1,10 @@
 ---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
 const pageTitle = "Blog Homepage"
+
 ---
 
 <html lang="en">
@@ -9,12 +14,16 @@ const pageTitle = "Blog Homepage"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+		<style>
+			h1 {
+			  color: navy;
+			  font-size: 5rem;
+			}
+		</style>
 	</head>
 	<body>
         <body>
-		    <a href="/">Home</a>
-		    <a href="/about/">About</a>
-            <a href="/blog/">Blog</a>
+			<Navigation />
             <h1>{pageTitle}</h1>
 			<h2>This is my blog homepage!</h2>
 			<p>This is the third page of my Astro site and I'm definitely starting to get the hang of this! Keep on the lookout for my first blog post!</p>
@@ -23,6 +32,7 @@ const pageTitle = "Blog Homepage"
                 <li><a href="/posts/post-2/">Post 2</a></li>
                 <li><a href="/posts/post-3/">Post 3</a></li>
             </ul>
+			<Footer/>
         </body>
 	</body>
 </html>

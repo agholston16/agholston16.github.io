@@ -1,4 +1,8 @@
 ---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
 const pageTitle = "About Me";
 const identity = {
   firstName: "Aaron",
@@ -14,7 +18,8 @@ const goal = 3;
 
 const skillColor = "navy";
 const fontWeight = "bold";
-const textCase =  "caps"
+const textCase =  "uppercase";
+const fontSize = "1rem";
 ---
 
 <html lang="en">
@@ -22,23 +27,22 @@ const textCase =  "caps"
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>{pageTitle}</title>
-		<style>
+		<style  define:vars={{skillColor, fontWeight, textCase, fontSize}}>
 			h1 {
-			  color: red;
-			  font-size: 4rem;
+			  color: navy;
+			  font-size: 5rem;
 			}
 			.skill {
 				color: var(--skillColor);
 				font-weight: var(--fontWeight);
 				text-transform: var(--textCase);
+				font-size: var(--fontSize);
 				  }
 		  </style>
 	</head>
 	<body>
 		<body>
-			<a href="/">Home</a>
-			<a href="/about/">About</a>
-			<a href="/blog/">Blog</a>
+			<Navigation />
 			<h1>{pageTitle}</h1>
 			<h2>... and my new Astro site!</h2>
 		  
@@ -64,5 +68,6 @@ const textCase =  "caps"
 
 			{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 		  </body>
+		  <Footer/>
 	</body>
 </html>

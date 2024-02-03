@@ -1,0 +1,26 @@
+---
+import Social from './Social.astro';
+---
+
+<style>
+    footer {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+  </style>
+  
+<footer>
+    <Social platform="Linkedin" username="in/aaron-gholston-1181a8153" />
+    <Social platform="Github" username="agholston16" />
+    <a href={`https://scholar.google.com/citations?user=H4M0mgcAAAAJ&hl=en`}>{"Google Scholar"}</a>
+    <style>
+        a {
+          padding: 0.5rem 1rem;
+          color: white;
+          background-color: #4c1d95;
+          text-decoration: none;
+        }
+      </style>
+</footer>
