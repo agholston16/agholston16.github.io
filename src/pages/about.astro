@@ -29,6 +29,11 @@ const textCase =  "caps"
 			  color: navy;
 			  font-size: 4rem;
 			}
+			.skill {
+				color: var(--skillColor);
+				font-weight: var(--fontWeight);
+				text-transform: var(--textCase);
+				  }
 		  </style>
 	</head>
 	<body>
@@ -36,17 +41,6 @@ const textCase =  "caps"
 			<a href="/">Home</a>
 			<a href="/about/">About</a>
 			<a href="/blog/">Blog</a>
-				<style>
-					h1 {
-				  	color: navy;
-				  	font-size: 4rem;
-					}
-					.skill {
-    					color: var(--skillColor);
-    					font-weight: var(--fontWeight);
-						text-transform: var(--textCase);
-  						}
-			  	</style>
 			<h1>{pageTitle}</h1>
 			<h2>... and my new Astro site!</h2>
 		  
